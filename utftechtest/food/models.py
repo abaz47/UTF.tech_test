@@ -20,13 +20,13 @@ class FoodCategory(TimeStampedModel):
         default=10, blank=True, null=True
     )
 
-    def __str__(self):
-        return self.name_ru
-
     class Meta:
         verbose_name = 'Раздел меню'
         verbose_name_plural = 'Разделы меню'
         ordering = ('name_ru', 'order_id')
+
+    def __str__(self):
+        return self.name_ru
 
 
 class Food(TimeStampedModel):
@@ -75,6 +75,10 @@ class Food(TimeStampedModel):
         'self', verbose_name='Дополнительные товары',
         symmetrical=False, related_name='additional_from', blank=True
     )
+
+    class Meta:
+        verbose_name = 'Позиция меню'
+        verbose_name_plural = 'Позиции меню'
 
     def __str__(self):
         return self.name_ru
