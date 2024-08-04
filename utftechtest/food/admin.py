@@ -3,7 +3,6 @@ from django.contrib.auth.models import Group, User
 
 from .models import Food, FoodCategory
 
-
 site.unregister(Group)
 site.unregister(User)
 
