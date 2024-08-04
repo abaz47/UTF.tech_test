@@ -95,6 +95,7 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+LANGUAGE_CODE = 'ru-RU'
 
 USE_TZ = True
 
